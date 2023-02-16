@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.footer {
+  display: flex;
+  background-color: #f8f8f8;
+  padding: 2rem;
+  justify-content: space-between;
+}
+
+.footerR {
+  display: flex;
+  gap: 3rem;
+}
+
+.siteName {
+  color: #c6c6c6;
+}
+
+.terms {
+  color: #f9a620;
+}

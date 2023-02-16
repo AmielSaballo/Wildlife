@@ -11,7 +11,7 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Employee", "About", "Contact"];
+const pages = ["Home", "About", "Services", "Blogs", "Join Us", "Contact"];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -76,7 +76,9 @@ function Navbar() {
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">
-                    <Link to={`/${page.toLowerCase()}`}>{page}</Link>
+                    <Link to={`/${page.toLowerCase().replace(/\s/g, "")}`}>
+                      {page}
+                    </Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -105,11 +107,11 @@ function Navbar() {
           >
             {pages.map((page) => (
               <Link
-                to={`/${page.toLowerCase()}`}
+                to={`/${page.toLowerCase().replace(/\s/g, "")}`}
                 style={{ textDecoration: "none" }}
+                key={page}
               >
                 <Button
-                  key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
