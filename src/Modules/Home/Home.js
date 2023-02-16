@@ -1,6 +1,7 @@
 import React from "react";
 import Footer from "../Common/Footer";
 import Counter from "./Components/Counter";
+import HomeAbout from "./Components/HomeAbout";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <section className="carousel">[insert blog carousel here]</section>
       <section className="about">
         <Counter policies={20} programs={15} services={10} people={30} />
+        <HomeAbout />
       </section>
       <section className="animals"></section>
       <section className="stat">aaaaaaaaaa</section>
