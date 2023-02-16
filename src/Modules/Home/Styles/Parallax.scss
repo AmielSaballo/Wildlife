@@ -1,0 +1,25 @@
+$green: #548c2f;
+
+.parallaxContainer {
+  content: "";
+  background: url("https://images.pexels.com/photos/3311093/pexels-photo-3311093.jpeg?auto=compress&cs=tinysrgb&w=1600");
+  min-height: 15rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  min-height: 15rem;
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  padding: 0 5rem;
+  font-size: 2.5rem;
+  justify-content: center;
+  font-weight: bold;
+}
