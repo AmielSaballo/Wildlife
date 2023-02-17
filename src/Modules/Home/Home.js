@@ -3,6 +3,7 @@ import Footer from "../Common/Footer";
 import Counter from "./Components/Counter";
 import HomeAbout from "./Components/HomeAbout";
 import Parallax from "./Components/Parallax";
+import Animals from "./Components/Animals";
 
 const Home = () => {
   return (
@@ -12,8 +13,9 @@ const Home = () => {
         <Counter policies={20} programs={15} services={10} people={30} />
         <HomeAbout />
       </section>
+      <Parallax />
       <section className="animals">
-        <Parallax />
+        <Animals />
       </section>
       <section className="stat">aaaaaaaaaa</section>
       <section className="join"></section>

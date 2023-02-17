@@ -1,0 +1,80 @@
+// $animalId: "Threatened", "Vulnerable", "Endangered", "CriticallyEndangered";
+
+// @mixin childrenGone($id) {
+//   @if $id == Threatened {
+//     #Vulnerable,
+//     #Endangered,
+//     #CriticallyEndangered {
+//       display: none;
+//     }
+//   } @else if $id == "Vulnerable" {
+//     #Threatened,
+//     #Endangered,
+//     #CriticallyEndangered {
+//       display: none;
+//     }
+//   } @else if $id == "Endangered" {
+//     #Threatened,
+//     #Vulnerable,
+//     #CriticallyEndangered {
+//       display: none;
+//     }
+//   } @else if $id == "CriticallyEndangered" {
+//     #Threatened,
+//     #Vulnerable,
+//     #Endangered {
+//       display: none;
+//     }
+//   }
+// }
+
+%hover {
+  &:hover > .overlay {
+    visibility: visible;
+    cursor: pointer;
+  }
+}
+
+.animalsHover {
+  max-width: 60%;
+  margin: 3rem auto 0;
+  & * {
+    height: 650px;
+    width: 275px;
+  }
+}
+
+tr:hover > td:not(:hover) {
+  visibility: hidden;
+  column-span: all;
+}
+
+.animals {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  & * {
+    @extend %hover;
+  }
+  #Threatened {
+    background-image: url("https://images.pexels.com/photos/1543417/pexels-photo-1543417.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    // @include childrenGone(Threatened);
+  }
+  #Vulnerable {
+    background-image: url("https://images.pexels.com/photos/7190227/pexels-photo-7190227.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    // @include childrenGone(Vulnerable);
+  }
+  #Endangered {
+    background-image: url("https://images.pexels.com/photos/33787/chimpanzee-sitting-sad-mammal.jpg?auto=compress&cs=tinysrgb&w=1600");
+    // @include childrenGone(Endangered);
+  }
+  #CriticallyEndangered {
+    background-image: url("https://images.pexels.com/photos/1068554/pexels-photo-1068554.jpeg?auto=compress&cs=tinysrgb&w=1600");
+    // @include childrenGone(CriticallyEndangered);
+  }
+
+  .overlay {
+    visibility: hidden;
+    padding: 0;
+  }
+}
