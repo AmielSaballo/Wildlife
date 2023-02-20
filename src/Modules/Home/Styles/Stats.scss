@@ -1,0 +1,75 @@
+$green: #104911;
+$yellow: #f9a620;
+
+.statContainer {
+  margin: 5rem 0 6rem;
+  text-align: center;
+  font-size: 3rem;
+  h1 {
+    font-weight: 800;
+  }
+}
+
+.greenText {
+  color: $green;
+}
+
+img {
+  margin-top: 2rem;
+}
+
+.statsLeft {
+  .statNumber {
+    color: $green;
+    margin-top: 2.5rem;
+    font-size: 7rem;
+  }
+
+  .statText {
+    font-size: 3rem;
+  }
+}
+
+.statsRight {
+  .statNumber {
+    color: $yellow;
+    font-size: 7rem;
+  }
+
+  .statText {
+    font-size: 2.5rem;
+  }
+
+  .normalStat {
+    margin: 2.5rem 0 2.5rem;
+  }
+}
+
+.statNumber {
+  font-weight: 900;
+}
+
+.statText {
+  font-weight: 600;
+}
+
+.bigStat {
+  background-color: #548c2f;
+  color: white;
+  border-radius: 30px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem 2rem 1rem 2rem;
+  margin-top: 2rem;
+
+  .statNumber {
+    font-size: 4.5rem;
+    color: white;
+  }
+
+  .statText {
+    font-size: 3.7rem;
+  }
+}

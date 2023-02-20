@@ -4,6 +4,8 @@ import Counter from "./Components/Counter";
 import HomeAbout from "./Components/HomeAbout";
 import Parallax from "./Components/Parallax";
 import Animals from "./Components/Animals";
+import Stats from "./Components/Stats";
+import MisVis from "./Components/MisVis";
 
 const Home = () => {
   return (
@@ -17,8 +19,12 @@ const Home = () => {
       <section className="animals">
         <Animals />
       </section>
-      <section className="stat">aaaaaaaaaa</section>
-      <section className="join"></section>
+      <section className="stat">
+        <Stats />
+      </section>
+      <section className="join">
+        <MisVis />
+      </section>
       <section className="services"></section>
       <Footer />
     </div>
