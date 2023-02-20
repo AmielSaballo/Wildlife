@@ -6,6 +6,7 @@ import Parallax from "./Components/Parallax";
 import Animals from "./Components/Animals";
 import Stats from "./Components/Stats";
 import MisVis from "./Components/MisVis";
+import HomeServices from "./Components/HomeServices";
 
 const Home = () => {
   return (
@@ -25,7 +26,10 @@ const Home = () => {
       <section className="join">
         <MisVis />
       </section>
-      <section className="services"></section>
+      <section className="services">
+        <HomeServices />
+      </section>
+      <section className="blogs"></section>
       <Footer />
     </div>
   );
