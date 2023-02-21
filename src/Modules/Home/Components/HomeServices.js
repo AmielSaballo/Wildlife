@@ -3,13 +3,34 @@ import ServiceCard from "./Card";
 import "../Styles/HomeServices.scss";
 
 function HomeServices() {
+  //get services
+  const services = [
+    {
+      name: "Lorem",
+      caption:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
+        "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+    },
+    {
+      name: "Lorem",
+      caption:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
+        "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+    },
+    {
+      name: "Lorem",
+      caption:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
+        "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+    },
+  ];
   return (
     <div>
       <div className="homeServiceContainer">
         <h1>Our Services</h1>
-        <div className="servicesCards">
-          <ServiceCard />
-        </div>
+        <section className="cardSection">
+          <ServiceCard props={services} />
+        </section>
       </div>
     </div>
   );

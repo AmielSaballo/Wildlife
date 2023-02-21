@@ -1,6 +1,23 @@
 $green: #104911;
 $lgreen: #548c2f;
 
+.homeServiceContainer {
+  margin-top: 5rem;
+  text-align: center;
+
+  h1 {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: $green;
+  }
+}
+
+.servicesCard {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+}
+
 .serviceBtn {
   margin-top: 3rem;
   text-align: center;
