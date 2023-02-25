@@ -3,9 +3,11 @@ import "../Styles/Content.scss";
 import Header from "../../Common/Header";
 import DENR from "../Images/DENR.png";
 import BMB from "../Images/BMB.png";
+import background from "../Images/TreeHugging.jpg";
 
 function Content() {
   const headerContent = {
+    background: background,
     title: "About Us",
     source: "DENR",
     sourceText: "Tree Hugging Campaign",

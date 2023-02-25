@@ -4,7 +4,13 @@ import "./Styles/Header.scss";
 function Header({ props }) {
   return (
     <div>
-      <div className="headerContainer">
+      <div
+        className="headerContainer"
+        style={{
+          backgroundImage: "url(" + props.background + ")",
+          backgroundPosition: props.position,
+        }}
+      >
         <p>Advocate. Donate. Protect the Wild.</p>
         <h1>{props.title}</h1>
         <hr
