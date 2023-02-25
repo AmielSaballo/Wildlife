@@ -31,8 +31,9 @@ const BlogCard = ({ props }) => {
           <hr
             style={{
               backgroundColor: "black",
-              height: "1px",
               borderColor: "black",
+              height: "1px",
+              width: "100%",
               margin: "1rem 0 0.5rem",
             }}
           />

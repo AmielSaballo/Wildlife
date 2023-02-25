@@ -1,0 +1,40 @@
+.headerContainer {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 50px;
+  color: white;
+  text-align: center;
+  background-blend-mode: darken;
+  background-color: rgba(0, 0, 0, 0.65);
+  line-height: 1rem;
+
+  p {
+    font-size: 1rem;
+    font-weight: 200;
+    color: #c8ecb8;
+  }
+
+  h1 {
+    padding: 1rem 0;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-weight: 300;
+}
+
+.sourceText {
+  float: right;
+  text-align: right;
+  p {
+    font-size: 14px;
+  }
+  a {
+    color: #a8d5e2;
+  }
+}

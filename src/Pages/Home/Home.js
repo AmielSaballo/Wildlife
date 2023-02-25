@@ -39,7 +39,6 @@ const Home = () => {
         <HomeAbout />
       </section>
       <Counter props={animalStats} />
-
       <section className="animalGrid">
         <Animals />
       </section>
