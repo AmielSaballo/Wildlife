@@ -8,6 +8,7 @@ import Stats from "./Components/Stats";
 import MisVis from "./Components/MisVis";
 import HomeServices from "./Components/HomeServices";
 import HomeCarousel from "./Components/HomeCarousel";
+import HomeBlogs from "./Components/HomeBlogs";
 
 const Home = () => {
   const animalStats = {
@@ -54,7 +55,9 @@ const Home = () => {
       <a href="/services">
         <Parallax text="Check out our services" />
       </a>
-      <section className="blogs"></section>
+      <section className="blogs">
+        <HomeBlogs />
+      </section>
       <Footer />
     </div>
   );

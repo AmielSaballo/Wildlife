@@ -1,10 +1,9 @@
 import React from "react";
-import ServiceCard from "./ServiceCard";
-import "../Styles/HomeServices.scss";
+import BlogCard from "./BlogCard";
+import "../Styles/HomeBlogs.scss";
 
-function HomeServices() {
-  //get services
-  const services = [
+function HomeBlogs() {
+  const blogs = [
     {
       name: "Lorem",
       caption:
@@ -29,14 +28,14 @@ function HomeServices() {
   ];
   return (
     <div>
-      <div className="homeServiceContainer">
-        <h1>Our Services</h1>
-        <section className="cardSection">
-          <ServiceCard props={services} />
-        </section>
+      <div className="blogsContainer">
+        <h1 className="blogTitle">Our Blogs</h1>
+        <div className="blogCardSection">
+          <BlogCard props={blogs} />
+        </div>
       </div>
     </div>
   );
 }
 
-export default HomeServices;
+export default HomeBlogs;
