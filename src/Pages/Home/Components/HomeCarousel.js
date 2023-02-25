@@ -1,36 +1,28 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
 import "../Styles/HomeCarousel.scss";
-
-function Item(props) {
-  return (
-    <div>
-      <img src={props.item.image} alt={props.item.text} />
-    </div>
-  );
-}
+import WorldWildlifeDay from "../images/wwd2023.jpg";
+import LeyteSab from "../images/Leyte Sab-a.jpg";
+import Hamiguitan from "../images/Hamiguitan.jpg";
+import Deer from "../images/PhilDeer.jpg";
 
 function HomeCarousel() {
   const items = [
     {
-      image:
-        "https://images.pexels.com/photos/927497/pexels-photo-927497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "a",
+      image: WorldWildlifeDay,
+      text: "AAAAAAAAAAAAAAAAAAAAAAAA",
     },
     {
-      image:
-        "https://images.pexels.com/photos/1068554/pexels-photo-1068554.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "b",
+      image: LeyteSab,
+      text: "BBBBBBBBBBBBBBBBBBBBBBBB",
     },
     {
-      image:
-        "https://images.pexels.com/photos/2265247/pexels-photo-2265247.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "c",
+      image: Hamiguitan,
+      text: "CCCCCCCCCCCCCCCCCCCCCCCCC",
     },
     {
-      image:
-        "https://images.pexels.com/photos/1123771/pexels-photo-1123771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      text: "d",
+      image: Deer,
+      text: "DDDDDDDDDDDDDDDDDDDDDDD",
     },
   ];
 
@@ -45,7 +37,13 @@ function HomeCarousel() {
         duration={800}
       >
         {items.map((item) => (
-          <Item item={item} key={items.indexOf(item)} />
+          <div
+            key={items.indexOf(item)}
+            className="carouselItems"
+            style={{ backgroundImage: "url(" + item.image + ")" }}
+          >
+            <p className="carouselText">{item.text}</p>
+          </div>
         ))}
       </Carousel>
     </div>

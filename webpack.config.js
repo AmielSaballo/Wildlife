@@ -39,6 +39,10 @@ module.exports = {
           { loader: "sass-loader" },
         ],
       },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif|webp)$/,
+        type: "asset/resource",
+      },
     ],
   },
   // pass all js files through Babel
