@@ -16,6 +16,15 @@ const Home = () => {
     endangered: 10,
     critEndangered: 30,
   };
+
+  const areaStats = {
+    protected: 248,
+    landArea: "30M",
+    terrestrial: "4.65M",
+    marine: "220M",
+    protectedMarine: "3.1M",
+    protectedArea: "7.79M",
+  };
   return (
     <div>
       <section className="carousel">
@@ -30,7 +39,7 @@ const Home = () => {
         <Animals />
       </section>
       <section className="stat">
-        <Stats />
+        <Stats props={areaStats} />
       </section>
       <section className="join">
         <MisVis />

@@ -2,7 +2,7 @@ import React from "react";
 import "../Styles/Stats.scss";
 import { Grid } from "@mui/joy";
 
-function Stats() {
+function Stats({ props }) {
   return (
     <div>
       <div className="statContainer">
@@ -18,8 +18,8 @@ function Stats() {
                 />
               </Grid>
               <Grid xs={1}>
-                <p className="statNumber">200</p>
-                <p className="statText">Lorem</p>
+                <p className="statNumber">{props.protected}</p>
+                <p className="statText">Protected Areas</p>
               </Grid>
             </Grid>
           </Grid>
@@ -32,25 +32,25 @@ function Stats() {
               sx={{ flexGrow: 1 }}
             >
               <Grid xs={1} className="normalStat">
-                <p className="statNumber">100</p>
-                <p className="statText">Lorem, ipsum..</p>
+                <p className="statNumber">{props.landArea}</p>
+                <p className="statText">Philippine Land Area</p>
               </Grid>
               <Grid xs={1} className="normalStat">
-                <p className="statNumber">100</p>
-                <p className="statText">Lorem, ipsum..</p>
+                <p className="statNumber">{props.terrestrial}</p>
+                <p className="statText">Terrestrial Protected Area</p>
               </Grid>
               <Grid xs={1} className="normalStat">
-                <p className="statNumber">100</p>
-                <p className="statText">Lorem, ipsum..</p>
+                <p className="statNumber">{props.marine}</p>
+                <p className="statText">Philippine Marine Area</p>
               </Grid>
               <Grid xs={1} className="normalStat">
-                <p className="statNumber">100</p>
-                <p className="statText">Lorem, ipsum..</p>
+                <p className="statNumber">{props.protectedMarine}</p>
+                <p className="statText">Marine Protected Area</p>
               </Grid>
               <Grid xs={2}>
                 <div className="bigStat">
-                  <p className="statNumber">110</p>
-                  <p className="statText">Lorem, ipsum.</p>
+                  <p className="statNumber">{props.protectedArea}</p>
+                  <p className="statText">Protected Area</p>
                 </div>
               </Grid>
             </Grid>
