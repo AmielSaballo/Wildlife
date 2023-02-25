@@ -57,7 +57,11 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="fixed" elevation={0} sx={{ background: background }}>
+    <AppBar
+      elevation={scroll > 100 ? 1 : 0}
+      position="fixed"
+      sx={{ background: background }}
+    >
       <Container sx={{ width: "100vw" }}>
         <Toolbar disableGutters>
           <Typography
