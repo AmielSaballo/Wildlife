@@ -1,6 +1,7 @@
 import React from "react";
 import "../Styles/MisVis.scss";
 import { Grid } from "@mui/joy";
+import PlantTrees from "../images/PlantTrees.jpg";
 
 function MisVis() {
   return (
@@ -10,12 +11,9 @@ function MisVis() {
         <Grid container sx={{ flexGrow: 1 }}>
           <Grid xs={2}></Grid>
           <Grid xs={3}>
-            <img
-              src="https://images.pexels.com/photos/6646883/pexels-photo-6646883.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              alt="Volunteer Work"
-            />
+            <img src={PlantTrees} alt="Volunteer Work" />
           </Grid>
-          <Grid xs={1.5}></Grid>
+          <Grid xs={2}></Grid>
           <Grid xs={3}>
             <div className="misvisText">
               <h2>Lorem, ipsum.</h2>

@@ -25,16 +25,20 @@ const Home = () => {
     protectedMarine: "3.1M",
     protectedArea: "7.79M",
   };
+
+  const motto = "Advocate. Donate. Protect the Wild.";
+
   return (
     <div>
       <section className="carousel">
         <HomeCarousel />
       </section>
       <section className="about">
-        <Counter props={animalStats} />
+        <Parallax text={motto} />
         <HomeAbout />
       </section>
-      <Parallax />
+      <Counter props={animalStats} />
+
       <section className="animalGrid">
         <Animals />
       </section>
@@ -47,7 +51,9 @@ const Home = () => {
       <section className="services">
         <HomeServices />
       </section>
-      <Parallax />
+      <a href="/services">
+        <Parallax text="Check out our services" />
+      </a>
       <section className="blogs"></section>
       <Footer />
     </div>

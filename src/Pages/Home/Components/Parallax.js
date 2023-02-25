@@ -1,12 +1,13 @@
 import React from "react";
 import "../Styles/Parallax.scss";
 
-function Parallax() {
+function Parallax(props) {
   return (
     <div>
       <div className="parallaxContainer">
         <div className="overlay">
-          <p>Lorem ipsum dolor sit amet.</p>
+          <p>{props.text}</p>
+          <hr />
         </div>
       </div>
     </div>
