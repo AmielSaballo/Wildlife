@@ -11,10 +11,42 @@ import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 
-const pages = ["Home", "About", "Services", "Blogs", "Join Us", "Contact"];
+const pages = [
+  {
+    name: "Home",
+    link: "home",
+  },
+  {
+    name: "About",
+    link: "about",
+  },
+  {
+    name: "Services",
+    link: "services",
+  },
+  {
+    name: "Blogs",
+    link: "blogs",
+  },
+  {
+    name: "Join Us",
+    link: "join",
+  },
+  {
+    name: "Contact",
+    link: "contact",
+  },
+];
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [scroll, setScroll] = React.useState(0);
+  const background = scroll > 100 ? "#f1f1f1" : "transparent";
+  const color = scroll > 100 ? "black" : "white";
+
+  window.onscroll = (e) => {
+    setScroll(window.scrollY);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -25,8 +57,8 @@ function Navbar() {
   };
 
   return (
-    <AppBar position="static">
-      <Container maxWidth="xl">
+    <AppBar position="fixed" elevation={0} sx={{ background: background }}>
+      <Container sx={{ width: "100vw" }}>
         <Toolbar disableGutters>
           <Typography
             variant="h6"
@@ -74,11 +106,12 @@ function Navbar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                <MenuItem
+                  key={pages.indexOf(page)}
+                  onClick={handleCloseNavMenu}
+                >
                   <Typography textAlign="center">
-                    <Link to={`/${page.toLowerCase().replace(/\s/g, "")}`}>
-                      {page}
-                    </Link>
+                    <Link to={page.link}>{page.name}</Link>
                   </Typography>
                 </MenuItem>
               ))}
@@ -107,15 +140,15 @@ function Navbar() {
           >
             {pages.map((page) => (
               <Link
-                to={`/${page.toLowerCase().replace(/\s/g, "")}`}
+                to={page.link}
                 style={{ textDecoration: "none" }}
-                key={page}
+                key={pages.indexOf(page)}
               >
                 <Button
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: color, display: "block" }}
                 >
-                  {page}
+                  {page.name}
                 </Button>
               </Link>
             ))}

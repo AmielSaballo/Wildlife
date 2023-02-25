@@ -10,18 +10,21 @@ function HomeServices() {
       caption:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
         "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+      link: "",
     },
     {
       name: "Lorem",
       caption:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
         "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+      link: "",
     },
     {
       name: "Lorem",
       caption:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Id cupiditate qui mollitia reprehenderit ipsam dignissimos sit provident quas? " +
         "Reprehenderit neque adipisci ipsa ullam id ducimus eaque ab voluptate officiis placeat!",
+      link: "",
     },
   ];
   return (

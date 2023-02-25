@@ -7,11 +7,14 @@ import Animals from "./Components/Animals";
 import Stats from "./Components/Stats";
 import MisVis from "./Components/MisVis";
 import HomeServices from "./Components/HomeServices";
+import HomeCarousel from "./Components/HomeCarousel";
 
 const Home = () => {
   return (
     <div>
-      <section className="carousel">[insert blog carousel here]</section>
+      <section className="carousel">
+        <HomeCarousel />
+      </section>
       <section className="about">
         <Counter policies={20} programs={15} services={10} people={30} />
         <HomeAbout />
@@ -29,6 +32,7 @@ const Home = () => {
       <section className="services">
         <HomeServices />
       </section>
+      <Parallax />
       <section className="blogs"></section>
       <Footer />
     </div>

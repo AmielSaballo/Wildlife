@@ -21,12 +21,12 @@ $lgreen: #548c2f;
 .serviceBtn {
   margin-top: 3rem;
   text-align: center;
-  cursor: pointer;
   button {
     padding: 1em 3em;
     border-radius: 25px;
     background-color: $lgreen;
     color: white;
     font-size: 1rem;
+    cursor: pointer;
   }
 }

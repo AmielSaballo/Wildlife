@@ -10,6 +10,7 @@ function Footer() {
         </div>
         <div className="footerR">
           <p className="siteName">Wildlife PH</p>
+          <p className="privacy">Privacy</p>
           <p className="terms">TERMS AND CONDITIONS</p>
         </div>
       </div>
