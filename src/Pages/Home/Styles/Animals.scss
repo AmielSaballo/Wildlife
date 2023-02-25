@@ -1,7 +1,7 @@
 %hover {
-  &:hover > .overlay {
-    visibility: visible;
+  &:hover {
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -18,24 +18,28 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  & * {
-    @extend %hover;
-  }
-  #Threatened {
-    background-image: url("https://images.pexels.com/photos/1543417/pexels-photo-1543417.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  }
-  #Vulnerable {
-    background-image: url("https://images.pexels.com/photos/7190227/pexels-photo-7190227.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  }
-  #Endangered {
-    background-image: url("https://images.pexels.com/photos/33787/chimpanzee-sitting-sad-mammal.jpg?auto=compress&cs=tinysrgb&w=1600");
-  }
-  #CriticallyEndangered {
-    background-image: url("https://images.pexels.com/photos/1068554/pexels-photo-1068554.jpeg?auto=compress&cs=tinysrgb&w=1600");
-  }
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  @extend %hover;
 
-  .overlay {
-    visibility: hidden;
-    padding: 0;
+  &#Threatened {
+    background-image: url("../images/Tarsier.jpg");
+  }
+  &#Vulnerable {
+    background-image: url("../images/LuzonBleedingHeartDove.webp");
+  }
+  &#Endangered {
+    background-image: url("../images/WartyPig.webp");
+  }
+  &#CriticallyEndangered {
+    background-image: url("../images/Colasisi.jpg");
+  }
+  p {
+    height: fit-content;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 2rem;
+    font-weight: 300;
   }
 }

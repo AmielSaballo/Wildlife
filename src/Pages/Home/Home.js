@@ -10,17 +10,23 @@ import HomeServices from "./Components/HomeServices";
 import HomeCarousel from "./Components/HomeCarousel";
 
 const Home = () => {
+  const animalStats = {
+    threatened: 20,
+    vulnerable: 15,
+    endangered: 10,
+    critEndangered: 30,
+  };
   return (
     <div>
       <section className="carousel">
         <HomeCarousel />
       </section>
       <section className="about">
-        <Counter policies={20} programs={15} services={10} people={30} />
+        <Counter props={animalStats} />
         <HomeAbout />
       </section>
       <Parallax />
-      <section className="animals">
+      <section className="animalGrid">
         <Animals />
       </section>
       <section className="stat">

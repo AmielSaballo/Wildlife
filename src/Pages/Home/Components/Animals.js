@@ -10,22 +10,22 @@ function Animals() {
             <tr>
               <td>
                 <div className="animals" id="Threatened">
-                  <div className="overlay"></div>
+                  <p>Other Threatened Species</p>
                 </div>
               </td>
               <td>
                 <div className="animals" id="Vulnerable">
-                  <div className="overlay"></div>
+                  <p>Vulnerable</p>
                 </div>
               </td>
               <td>
                 <div className="animals" id="Endangered">
-                  <div className="overlay"></div>
+                  <p>Endangered</p>
                 </div>
               </td>
               <td>
                 <div className="animals" id="CriticallyEndangered">
-                  <div className="overlay"></div>
+                  <p>Critically Endangered</p>
                 </div>
               </td>
             </tr>
