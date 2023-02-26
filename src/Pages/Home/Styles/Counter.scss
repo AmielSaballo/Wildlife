@@ -1,0 +1,27 @@
+$green: #548c2f;
+
+.counterNumber {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.counterGridContainer {
+  margin: auto;
+  color: black;
+  border-radius: 20px;
+  text-align: center;
+  width: 75%;
+  font-size: 1.5rem;
+  background-color: #d9d9d9;
+  padding: 1rem 0;
+  // &:nth-last-child(2) {
+  //   border-right: solid 10px $green;
+  // }
+}
+
+// .counterGridItem:last-child {
+//   background-color: $green;
+//   color: #ffd449;
+//   border-top-right-radius: 20px;
+//   border-bottom-right-radius: 20px;
+// }

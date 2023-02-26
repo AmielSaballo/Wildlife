@@ -1,0 +1,57 @@
+$green: #548c2f;
+$dgreen: #104911;
+
+.aboutContainer {
+  margin: 3rem 10rem;
+}
+
+.denr,
+.bmb {
+  display: flex;
+  width: 85%;
+  align-items: center;
+  margin-bottom: 1rem;
+  h1 {
+    color: $dgreen;
+  }
+  img {
+    width: 265px;
+    height: 265px;
+  }
+}
+
+.bmb {
+  margin-left: auto;
+  text-align: right;
+  align-items: center;
+}
+
+.aboutBtn {
+  margin: 2rem;
+  text-align: center;
+  button {
+    margin-top: 2rem;
+    padding: 1em 2.5em;
+    border-radius: 50px;
+    background-color: $green;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $dgreen;
+    }
+  }
+}
+
+.topic {
+  color: #f9a620;
+  font-weight: 600;
+}
+
+.denrText,
+.bmbText {
+  p {
+    margin: 1rem 0;
+  }
+}

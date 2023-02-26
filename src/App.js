@@ -1,6 +1,10 @@
 import React from "react";
-const App = () => {
-  return <h1>Hello World!</h1>;
-};
+import Router from "./Router";
 
-export default App;
+export default function App() {
+  return (
+    <div>
+      <Router />
+    </div>
+  );
+}
