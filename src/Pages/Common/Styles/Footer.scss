@@ -39,4 +39,16 @@
 .terms,
 .privacy {
   color: #f9a620;
+  cursor: pointer;
+}
+
+.termsCondition,
+.privacyContent {
+  margin-bottom: 1rem;
+  h2 {
+    margin-bottom: 1rem;
+    &:first-child {
+      margin-top: 1rem;
+    }
+  }
 }

@@ -3,6 +3,8 @@ import "../Common/Styles/Footer.scss";
 import wwlogo from "../../Logo.png";
 import denrlogo from "../../Pages/About/Images/DENR.png";
 import bmblogo from "../../Pages/About/Images/BMB.png";
+import Terms from "./Terms";
+import Privacy from "./Privacy";
 
 function Footer() {
   return (
@@ -17,8 +19,8 @@ function Footer() {
         </div>
         <div className="footerR">
           <p className="siteName">Wildlife PH</p>
-          <p className="privacy">Privacy</p>
-          <p className="terms">TERMS AND CONDITIONS</p>
+          <Privacy />
+          <Terms />
         </div>
       </div>
     </div>
