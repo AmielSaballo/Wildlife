@@ -11,9 +11,11 @@
   }
 }
 
-img {
-  border-radius: 30px;
-  max-height: 500px;
+.imageContainer {
+  img {
+    border-radius: 30px;
+    max-height: 500px;
+  }
 }
 
 .content {
@@ -34,11 +36,6 @@ img {
   margin-top: 2rem;
 }
 
-span {
-  margin: 0 2rem;
-  color: #f7b375;
-}
-
 .infotxt {
   display: flex;
   align-items: center;
@@ -50,5 +47,10 @@ span {
     font-size: 25px;
     position: relative;
     top: 0;
+
+    span {
+      margin: 0 2rem;
+      color: #f7b375;
+    }
   }
 }

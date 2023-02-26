@@ -3,6 +3,7 @@ import HOC from "./Components/HOC";
 import Header from "../Common/Header";
 import background from "./Images/PhilHawk.jpg";
 import "./Styles/ServicePost.scss";
+import Footer from "../Common/Footer";
 
 function ServicePost({ urlParams, props }) {
   //   {urlParams.service_id}
@@ -45,6 +46,7 @@ function ServicePost({ urlParams, props }) {
           <p>{props.text}</p>
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

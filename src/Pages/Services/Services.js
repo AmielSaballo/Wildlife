@@ -1,5 +1,6 @@
 import React from "react";
 import Content from "./Components/Content";
+import Footer from "../Common/Footer";
 
 function Services() {
   const servicesList = [
@@ -32,6 +33,7 @@ function Services() {
   return (
     <div>
       <Content props={servicesList} />
+      <Footer />
     </div>
   );
 }

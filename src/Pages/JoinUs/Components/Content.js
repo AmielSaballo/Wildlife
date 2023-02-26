@@ -22,7 +22,7 @@ function Content() {
         <div className="image">
           <img src={CostalCleanUp} alt="Coastal Clean Up" />
         </div>
-        <div className="content">
+        <div className="joinContent">
           <div className="text">
             <h1>Be a Volunteer!</h1>
             <p>
@@ -53,7 +53,7 @@ function Content() {
               </h1>
             </div>
           </div>
-          <div className="quote">
+          <div className="joinForm">
             <h2>Join hands and save the wildlife.</h2>
             <form action="">
               <TextField id="fname" label="First Name" />
