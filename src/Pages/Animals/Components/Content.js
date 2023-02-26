@@ -252,6 +252,7 @@ function Content() {
           <div className="animalPictures">
             <img src={Tarsier} id="animalPic1" className="animalImg" />
             <a
+              target={"new"}
               id="animalSource1"
               href="https://philippinemorningpost.com/philippine-tarsier-facing-extinction/"
             >
@@ -263,6 +264,7 @@ function Content() {
               className="animalImg"
             />
             <a
+              target={"new"}
               id="animalSource2"
               href="https://stlzoo.org/animals/birds/pigeons-doves/luzon-bleeding-heart-dove"
             >
@@ -270,6 +272,7 @@ function Content() {
             </a>
             <img src={CalamianDeer} id="animalPic3" className="animalImg" />
             <a
+              target={"new"}
               id="animalSource3"
               href="https://www.joelsartore.com/ani023-00165/"
             >
@@ -277,6 +280,7 @@ function Content() {
             </a>
             <img src={Colasisi} id="animalPic4" className="animalImg" />
             <a
+              target={"new"}
               id="animalSource4"
               href="https://www.wildbirdphotographersofthephilippinesglossary.com/gallery/wppaspec/oc2/cv0/abParrot-Philippine-Hanging-AKA-Colasisi"
             >
