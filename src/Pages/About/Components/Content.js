@@ -80,7 +80,9 @@ function Content() {
         </div>
       </div>
       <div className="aboutBtn">
-        <button>Services</button>
+        <a href="/services">
+          <button>Services</button>
+        </a>
       </div>
     </div>
   );

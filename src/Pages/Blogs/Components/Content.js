@@ -60,12 +60,12 @@ function Content({ props, topBlogs }) {
           <h1>Recent Blog Posts</h1>
           {blogsList}
         </div>
-        <div className="sidePane">
+        {/* <div className="sidePane">
           <div className="listTopBlogs">
             <h1>Top Blog Posts</h1>
             {topBlogsList}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

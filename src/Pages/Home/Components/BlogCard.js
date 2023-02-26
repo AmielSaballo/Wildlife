@@ -37,7 +37,7 @@ const BlogCard = ({ props }) => {
               margin: "1rem 0 0.5rem",
             }}
           />
-          <p className="comments">00/00/00 - 10 Comments</p>
+          <p className="comments">00/00/00</p>
         </Box>
       </Card>
     );

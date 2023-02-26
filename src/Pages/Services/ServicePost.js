@@ -35,7 +35,10 @@ function ServicePost({ urlParams, props }) {
             </p>
             <p className="infotxt">
               <span className="material-icons"> language </span>
-              <a href="https://www.bmb.gov.ph/index.php/major-programs-paoemd/padm">
+              <a
+                href="https://www.bmb.gov.ph/index.php/major-programs-paoemd/padm"
+                target={"new"}
+              >
                 Protected Area Development and Management
               </a>
             </p>

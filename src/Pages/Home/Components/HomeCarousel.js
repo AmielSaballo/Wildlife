@@ -63,7 +63,7 @@ function HomeCarousel() {
             style={{ backgroundImage: "url(" + item.image + ")" }}
           >
             <div className="carouselText">
-              <a href={item.link}>
+              <a href={item.link} target={"new"}>
                 <h3>{item.title}</h3>
               </a>
               <p>{item.text}</p>

@@ -127,9 +127,9 @@ function Content() {
       let item = category[i];
       if (
         chosen.id == item &&
-        !document.getElementById(item).classList.contains("active")
+        !document.getElementById(item).classList.contains("activeAnimal")
       ) {
-        document.getElementById(item).classList.add("active");
+        document.getElementById(item).classList.add("activeAnimal");
         document.getElementById("categoryDesc").innerHTML =
           categoryDescText[chosen.id];
         document.getElementById("animalPic1").src =
@@ -157,10 +157,10 @@ function Content() {
         document.getElementById("animalSource4").href =
           animalPicList[chosen.id].source4;
       } else {
-        document.getElementById(item).classList.remove("active");
+        document.getElementById(item).classList.remove("activeAnimal");
       }
     }
-    if (document.getElementsByClassName("active").length == 0) {
+    if (document.getElementsByClassName("activeAnimal").length == 0) {
       document.getElementById("categoryDesc").innerHTML = "";
       document.getElementById("animalPic1").src =
         animalPicList["Threatened"].image1;
