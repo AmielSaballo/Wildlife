@@ -9,6 +9,7 @@ import Services from "./Pages/Services/Services";
 import ServicePost from "./Pages/Services/ServicePost";
 import Blogs from "./Pages/Blogs/Blogs";
 import BlogPost from "./Pages/Blogs/BlogPost";
+import Animals from "./Pages/Animals/Animals";
 
 const Router = () => {
   return (
@@ -24,6 +25,7 @@ const Router = () => {
         <Route path="/blogs/:blog_id" element={<BlogPost />} />
         <Route path="/join" element={<JoinUs />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/animals" element={<Animals />} />
       </Routes>
     </BrowserRouter>
   );
