@@ -11,13 +11,23 @@
 .footer {
   display: flex;
   background-color: #f8f8f8;
-  padding: 2rem;
+  padding: 1rem 2rem;
   justify-content: space-between;
+}
+
+.footerL {
+  display: flex;
+
+  img {
+    height: 50px;
+    margin: 0;
+  }
 }
 
 .footerR {
   display: flex;
   gap: 3rem;
+  align-items: center;
 }
 
 .siteName {

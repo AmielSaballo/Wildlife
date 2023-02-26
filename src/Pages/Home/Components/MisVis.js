@@ -16,27 +16,25 @@ function MisVis() {
           <Grid xs={2}></Grid>
           <Grid xs={3}>
             <div className="misvisText">
-              <h2>Lorem, ipsum.</h2>
+              <h2>Our Development Goal</h2>
               <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro
-                veritatis sequi quam est maxime quisquam atque, blanditiis ex
-                optio quibusdam ut ratione aliquid ab itaque deleniti rem nihil
-                libero qui excepturi. Exercitationem maxime veritatis adipisci
-                commodi corrupti earum facilis nam? Error suscipit soluta, hic
-                voluptate repudiandae eius, inventore cumque voluptates nulla
-                dolorem dolor consectetur atque alias voluptatem, maxime
-                provident expedita quas. Ad accusantium aspernatur delectus
-                laborum, laudantium, veniam sint voluptates, aliquid porro modi
-                vel iusto blanditiis esse distinctio minima ratione labore est!
-                Nisi odio maiores numquam eum id cupiditate, exercitationem
-                animi vero temporibus commodi iste rerum ab in obcaecati iure
-                sequi incidunt nesciunt sapiente quisquam ducimus assumenda
-                laborum delectus? Sapiente, recusandae excepturi. Accusantium
-                optio amet omnis dolore molestias quisquam vitae?
+                The Department of Environment and Natural Resources has a
+                development goal for ensuring environmental quality and
+                sustainability together with the Filipinos' well-being. As per
+                their mandate (E.O. 192, s. 1987), this department is the
+                primary agency responsible for the conservation, management,
+                development, and proper use of the country’s environment and
+                natural resources, specifically forest and grazing lands,
+                mineral resources, including those in reservation and watershed
+                areas, and lands of the public domain, as well as the licensing
+                and regulation of all natural resources as may be provided for
+                by law in order to ensure equitable sharing of the benefits
+                derived therefrom for the welfare of the present and future
+                generations of Filipinos.
               </p>
             </div>
             <div className="joinUs">
-              <a href="/joinus">
+              <a href="/join">
                 <button>Join Us</button>
               </a>
             </div>

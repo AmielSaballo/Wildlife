@@ -10,6 +10,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import Logo from "../../Logo.png";
 
 const pages = [
   {
@@ -64,6 +65,9 @@ function Navbar() {
     >
       <Container sx={{ width: "100vw" }}>
         <Toolbar disableGutters>
+          <a href="/">
+            <img src={Logo} style={{ maxHeight: "80px", margin: 0 }} />
+          </a>
           <Typography
             variant="h6"
             component="a"

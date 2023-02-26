@@ -52,7 +52,7 @@ const Home = () => {
         <HomeServices />
       </section>
       <a href="/services">
-        <Parallax text="Check out our services" />
+        <Parallax text="Check out our services" span="arrow_circle_right" />
       </a>
       <section className="blogs">
         <HomeBlogs />

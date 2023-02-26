@@ -6,7 +6,9 @@ function Parallax(props) {
     <div>
       <div className="parallaxContainer">
         <div className="overlay">
-          <p>{props.text}</p>
+          <h3>
+            {props.text} <span className="material-icons">{props.span}</span>
+          </h3>
           <hr />
         </div>
       </div>

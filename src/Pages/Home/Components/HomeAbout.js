@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@mui/joy/Grid";
 import "../Styles/HomeAbout.scss";
+import LogoText from "../Images/LogoText.png";
 
 function HomeAbout() {
   return (
@@ -8,19 +9,29 @@ function HomeAbout() {
       <div className="aboutGridContainer">
         <Grid container columns={2} sx={{ flexGrow: 1 }}>
           <Grid xs={1}>
-            <img
-              src="https://ecitesph.com/web/image/683/bmbDENRNewLogo.png"
-              alt="BMB logo"
-            />
+            <img src={LogoText} alt="BMB logo" />
           </Grid>
           <Grid xs={1}>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              consequuntur blanditiis nostrum error numquam earum perferendis
-              totam minus inventore ipsum id, dolores maxime quidem saepe rem
-              velit doloremque delectus aliquam labore et nam impedit sunt
-              ducimus! Voluptatem cumque, distinctio adipisci voluptates
-              pariatur laborum provident nulla ab temporibus iure sint alias?
+              Our mission is to raise awareness about the importance of
+              conservation and to inspire action towards a sustainable future
+              for all species. Through education, advocacy, and conservation
+              efforts, we strive to ensure the survival and well-being of
+              wildlife populations in the Philippines.
+              <br />
+              <br />
+              Our team is partnered with governments agencies such as the
+              Department of Environment and Natural Resources (DENR) alongside
+              with its bureau for wildlife, Biodiversity Management Bureau
+              (BMB). We have experts in wildlife biology, ecology, and
+              conservation, as well as dedicated volunteers and supporters who
+              share our passion for protecting the natural world.
+              <br />
+              <br />
+              We believe that everyone has a role to play in wildlife
+              conservation, and we welcome individuals and organizations of all
+              backgrounds to join us in our efforts. Together, we can ensure a
+              future where all species thrive in healthy and vibrant ecosystems.
             </p>
             <a href="/about">
               <button className="aboutButton">About Us</button>
