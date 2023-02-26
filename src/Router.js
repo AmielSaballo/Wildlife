@@ -5,6 +5,8 @@ import Home from "./Pages/Home/Home";
 import About from "./Pages/About/About";
 import JoinUs from "./Pages/JoinUs/JoinUs";
 import Contact from "./Pages/Contact/Contact";
+import Services from "./Pages/Services/Services";
+import ServicePost from "./Pages/Services/ServicePost";
 
 const Router = () => {
   return (
@@ -14,6 +16,8 @@ const Router = () => {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/services/:service_id" element={<ServicePost />} />
         <Route path="/join" element={<JoinUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
