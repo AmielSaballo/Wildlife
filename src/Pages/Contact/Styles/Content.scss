@@ -7,7 +7,7 @@
   a {
     text-decoration: none;
 
-    &a:hover {
+    &:hover {
       text-decoration: underline;
       color: #f9a620;
     }
@@ -64,11 +64,16 @@ form {
   color: #5e5e5e;
   font-weight: 200;
   font-style: italic;
+  cursor: default;
 }
 
 .branchDetails {
   display: none;
-  margin-left: 2rem;
+  margin: 0.5rem 0 1rem 2rem;
+
+  p {
+    margin: 0.5rem 0;
+  }
 }
 
 .container .faqButton {
@@ -91,10 +96,11 @@ form {
 
 .faqHeaders h2 {
   color: #104911;
+  margin-top: 1rem;
 }
 
 .qaList {
-  padding: 0 18px;
+  padding: 0 1.1rem;
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.2s ease-out;
@@ -105,7 +111,7 @@ form {
   display: flex;
   margin-bottom: 1rem;
   h3 {
-    margin: 0;
+    margin-top: 0;
   }
   p {
     margin: 0.5px 1rem;
@@ -127,4 +133,15 @@ form {
   background-color: #f5f5f5;
   padding: 2rem;
   margin: 0;
+}
+
+.DENR,
+.BMB,
+.Offices,
+.Agencies {
+  margin-bottom: 1rem;
+}
+
+.qaDiv {
+  padding: 1rem 0;
 }
