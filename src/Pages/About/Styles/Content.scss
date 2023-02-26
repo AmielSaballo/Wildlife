@@ -1,4 +1,5 @@
 $green: #548c2f;
+$dgreen: #104911;
 
 .aboutContainer {
   margin: 3rem 10rem;
@@ -11,7 +12,7 @@ $green: #548c2f;
   align-items: center;
   margin-bottom: 1rem;
   h1 {
-    color: #104911;
+    color: $dgreen;
   }
   img {
     width: 265px;
@@ -36,10 +37,21 @@ $green: #548c2f;
     color: white;
     font-size: 1.2rem;
     cursor: pointer;
+
+    &:hover {
+      background-color: $dgreen;
+    }
   }
 }
 
 .topic {
   color: #f9a620;
   font-weight: 600;
+}
+
+.denrText,
+.bmbText {
+  p {
+    margin: 1rem 0;
+  }
 }
