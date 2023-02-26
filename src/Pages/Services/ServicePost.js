@@ -1,5 +1,5 @@
 import React from "react";
-import HOC from "./Components/HOC";
+import HOC from "../Common/HOC";
 import Header from "../Common/Header";
 import background from "./Images/PhilHawk.jpg";
 import "./Styles/ServicePost.scss";

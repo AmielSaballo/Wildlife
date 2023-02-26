@@ -7,6 +7,8 @@ import JoinUs from "./Pages/JoinUs/JoinUs";
 import Contact from "./Pages/Contact/Contact";
 import Services from "./Pages/Services/Services";
 import ServicePost from "./Pages/Services/ServicePost";
+import Blogs from "./Pages/Blogs/Blogs";
+import BlogPost from "./Pages/Blogs/BlogPost";
 
 const Router = () => {
   return (
@@ -18,6 +20,8 @@ const Router = () => {
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
         <Route path="/services/:service_id" element={<ServicePost />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:blog_id" element={<BlogPost />} />
         <Route path="/join" element={<JoinUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
