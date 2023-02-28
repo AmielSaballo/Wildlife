@@ -68,7 +68,10 @@ function HomeCarousel() {
               </a>
               <p>{item.text}</p>
               <p>
-                Source: <a href={item.sourceLink}>{item.sourceText}</a>
+                Source:{" "}
+                <a href={item.sourceLink} target={"new"}>
+                  {item.sourceText}
+                </a>
               </p>
             </div>
           </div>
