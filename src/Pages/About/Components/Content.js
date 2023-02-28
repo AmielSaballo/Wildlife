@@ -4,6 +4,7 @@ import Header from "../../Common/Header";
 import DENR from "../Images/DENR.png";
 import BMB from "../Images/BMB.png";
 import background from "../Images/TreeHugging.jpg";
+import { Link } from "react-router-dom";
 
 function Content() {
   const headerContent = {
@@ -80,9 +81,9 @@ function Content() {
         </div>
       </div>
       <div className="aboutBtn">
-        <a href="/services">
+        <Link to={"/services"}>
           <button>Services</button>
-        </a>
+        </Link>
       </div>
     </div>
   );
