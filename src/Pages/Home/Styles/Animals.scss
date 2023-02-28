@@ -1,0 +1,45 @@
+%hover {
+  &:hover {
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+}
+
+.animalsHover {
+  max-width: 60%;
+  margin: 3rem auto 0;
+  & * {
+    height: 650px;
+    width: 275px;
+  }
+}
+
+.animals {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+  background-blend-mode: darken;
+  @extend %hover;
+
+  &#Threatened {
+    background-image: url("../images/Tarsier.jpg");
+  }
+  &#Vulnerable {
+    background-image: url("../images/LuzonBleedingHeartDove.webp");
+  }
+  &#Endangered {
+    background-image: url("../images/CalamianDeer.jpg");
+  }
+  &#CriticallyEndangered {
+    background-image: url("../images/Colasisi.jpg");
+  }
+  p {
+    height: fit-content;
+    text-align: center;
+    padding-top: 5rem;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+}

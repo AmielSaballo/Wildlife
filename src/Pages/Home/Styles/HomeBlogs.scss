@@ -1,0 +1,24 @@
+$green: #104911;
+$greenText: #457e2b;
+
+.blogsContainer {
+  margin-top: 2rem;
+  text-align: center;
+  .blogTitle {
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    color: $green;
+  }
+}
+
+.blogsCard {
+  display: flex;
+  gap: 5rem;
+  justify-content: center;
+  text-align: left;
+}
+
+.comments {
+  color: $greenText;
+  text-align: right;
+}

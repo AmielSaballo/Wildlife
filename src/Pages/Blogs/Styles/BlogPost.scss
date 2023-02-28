@@ -1,0 +1,36 @@
+.blogPostContainer {
+  margin: 3rem;
+
+  h1 {
+    color: #104911;
+  }
+}
+
+.blogPostImage {
+  margin: 0 auto;
+  text-align: center;
+
+  img {
+    height: 50vh;
+    width: 90vw;
+    object-fit: cover;
+  }
+}
+
+.blogPostContent {
+  margin: 3rem 5rem;
+}
+
+.blogPostText {
+  margin: 2rem 0;
+}
+
+.blogPostDetails {
+  display: flex;
+
+  p {
+    color: #f9a620;
+    font-size: 1rem;
+    padding-right: 0.2rem;
+  }
+}
