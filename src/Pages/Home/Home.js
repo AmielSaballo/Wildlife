@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Common/Footer";
 import Counter from "./Components/Counter";
 import HomeAbout from "./Components/HomeAbout";
@@ -51,9 +52,9 @@ const Home = () => {
       <section className="services">
         <HomeServices />
       </section>
-      <a href="/services">
+      <Link to={"/services"}>
         <Parallax text="Check out our services" span="arrow_circle_right" />
-      </a>
+      </Link>
       <section className="blogs">
         <HomeBlogs />
       </section>
