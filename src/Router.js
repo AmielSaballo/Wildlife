@@ -13,7 +13,7 @@ import Animals from "./Pages/Animals/Animals";
 
 const Router = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
