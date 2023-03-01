@@ -82,7 +82,7 @@ function Content() {
       </div>
       <div className="aboutBtn">
         <Link to={"/services"}>
-          <button>Services</button>
+          <button>Programs</button>
         </Link>
       </div>
     </div>

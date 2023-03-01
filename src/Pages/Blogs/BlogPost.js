@@ -1,11 +1,30 @@
-import React from "react";
+import { React, useState, useEffect } from "react";
 import HOC from "../Common/HOC";
 import Header from "../Common/Header";
 import background from "./Images/Tamaraw3.jpg";
 import "./Styles/BlogPost.scss";
 import Footer from "../Common/Footer";
+import axios from "axios";
+import parse from "html-react-parser";
+import { BlogsAPI } from "../../Assets/services";
 
-function BlogPost({ urlParams, props }) {
+function BlogPost({ urlParams }) {
+  const [post, SetPost] = useState([]);
+  const [init, SetInit] = useState(false);
+
+  useEffect(() => {
+    axios.get(BlogsAPI).then((res) => {
+      if (!init) {
+        res.data.map((item) => {
+          if (item.blogTitle === urlParams.blog_id) {
+            SetPost(item);
+          }
+        });
+        SetInit(true);
+      }
+    });
+  });
+
   const headerContent = {
     background: background,
     title: "Blogs",
@@ -19,7 +38,14 @@ function BlogPost({ urlParams, props }) {
       <Header props={headerContent} />
       <div className="blogPostContainer">
         <div className="blogPostImage">
-          <img src={props.image} alt={props.alt} />
+          {post.blogImage != null ? (
+            <img
+              src={require(`./Images/${post.blogImage}`)}
+              className="cardImage"
+            />
+          ) : (
+            ""
+          )}
         </div>
         <hr
           style={{
@@ -31,14 +57,14 @@ function BlogPost({ urlParams, props }) {
           }}
         />
         <div className="blogPostContent">
-          <h1>{props.title}</h1>
+          <h1>{post.blogTitle}</h1>
           <div className="blogPostDetails">
-            <p>{props.author}</p>
+            <p>{post.blogAuthor}</p>
             <p>•</p>
-            <p>{props.datePosted}</p>
+            <p>{post.postedDate}</p>
           </div>
           <div className="blogPostText">
-            <p>{props.content}</p>
+            <p>{parse(`${post.blogContent}`)}</p>
           </div>
         </div>
       </div>
