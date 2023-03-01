@@ -9,7 +9,7 @@ import CatSnake from "../Images/CatSnek.jpg";
 import Colasisi from "../Images/Colasisi.jpg";
 import Dugong from "../Images/Dugong.jpg";
 import FlyingFox from "../Images/FlyingFox.jpg";
-import BleedingHeartDove from "../Images/LuzonBleedingHeartDove.webp";
+import BleedingHeartDove from "../Images/LuzonBleedingHeartDove.png";
 import Binturong from "../Images/Mood.jpg";
 import Pangolin from "../Images/Pangolin.jpg";
 import PhilDuck from "../Images/PhilDuck.jpg";
@@ -17,7 +17,7 @@ import PhilHawkEagle from "../Images/PhilHawkEagle.jpg";
 import Tamaraw from "../Images/Tamaraw.jpg";
 import Tarsier from "../Images/Tarsier.jpg";
 import PalawanTit from "../Images/Tit.jpg";
-import WartyPig from "../Images/WartyPig.webp";
+import WartyPig from "../Images/WartyPig.png";
 
 function Content() {
   const headerContent = {
