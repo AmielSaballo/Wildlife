@@ -68,7 +68,7 @@ function ProgramPost({ urlParams }) {
                 href="https://www.bmb.gov.ph/index.php/major-programs-paoemd/padm"
                 target={"new"}
               >
-                Protected Area Development and Management
+                Source
               </a>
             </p>
           </div>
