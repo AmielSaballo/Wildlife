@@ -172,7 +172,7 @@ function Content() {
             <br />
             <div className="counter">
               <h1>
-                Be part of the <span className="counter">20,000</span> people
+                Be part of the <span className="counter">20,000+</span> people
                 advocating for our nation's wildlife.
               </h1>
             </div>
