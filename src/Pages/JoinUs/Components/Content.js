@@ -183,6 +183,7 @@ function Content() {
               <TextField
                 id="fname"
                 label="First Name"
+                sx={{ mt: "1rem", mr: "1rem" }}
                 onChange={handleChange}
                 {...(error.fnameError && {
                   error: true,
@@ -192,6 +193,7 @@ function Content() {
               <TextField
                 id="lname"
                 label="Last Name"
+                sx={{ mt: "1rem" }}
                 onChange={handleChange}
                 {...(error.lnameError && {
                   error: true,
@@ -201,6 +203,7 @@ function Content() {
               <TextField
                 id="email"
                 label="Email"
+                sx={{ mt: "1rem", mr: "1rem" }}
                 onChange={handleChange}
                 {...(error.emailError && {
                   error: true,
@@ -210,6 +213,7 @@ function Content() {
               <TextField
                 id="phone"
                 label="Phone Number"
+                sx={{ mt: "1rem" }}
                 onChange={handleChange}
                 {...(error.phoneError && {
                   error: true,
