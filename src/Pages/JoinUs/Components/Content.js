@@ -5,7 +5,7 @@ import background from "../Images/MarineTurtle.jpg";
 import CostalCleanUp from "../Images/CoastalCleanup.jfif";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { VolunteerAPI } from "../../../Assets/services";
+import { VolunteerAPI } from "../../../Utils/services";
 
 function Content() {
   const [firstName, SetFName] = useState("");

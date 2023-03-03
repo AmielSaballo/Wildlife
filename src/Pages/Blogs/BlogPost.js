@@ -6,7 +6,7 @@ import "./Styles/BlogPost.scss";
 import Footer from "../Common/Footer";
 import axios from "axios";
 import parse from "html-react-parser";
-import { BlogsAPI } from "../../Assets/services";
+import { BlogsAPI } from "../../Utils/services";
 
 function BlogPost({ urlParams }) {
   const [post, SetPost] = useState([]);

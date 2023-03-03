@@ -6,7 +6,7 @@ import "./Styles/ProgramPost.scss";
 import Footer from "../Common/Footer";
 import axios from "axios";
 import parse from "html-react-parser";
-import { ProgramsAPI } from "../../Assets/services";
+import { ProgramsAPI } from "../../Utils/services";
 
 function ProgramPost({ urlParams }) {
   // console.log(`https://localhost:7153/api/Programs/${urlParams.program_id}`);
