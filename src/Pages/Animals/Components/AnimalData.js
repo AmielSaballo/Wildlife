@@ -143,13 +143,12 @@ export default function AnimalData() {
     setPage(0);
   };
 
-  // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
     page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
 
   return (
     <Box sx={{ width: "100%" }}>
-      {rows == null ? (
+      {rows.length < 1 ? (
         <Loading />
       ) : (
         <Paper sx={{ width: "100%", mb: 2 }}>
