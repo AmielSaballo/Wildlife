@@ -18,8 +18,11 @@ import Tamaraw from "../Images/Tamaraw.jpg";
 import Tarsier from "../Images/Tarsier.jpg";
 import PalawanTit from "../Images/Tit.jpg";
 import WartyPig from "../Images/WartyPig.png";
+import * as action from "../Utils/Action";
+import { useDispatch } from "react-redux";
 
 function Content() {
+  const dispatch = useDispatch();
   const headerContent = {
     background: Pawikan,
     title: "Animals",
@@ -31,14 +34,14 @@ function Content() {
   };
 
   const category = [
-    "Threatened",
+    "OtherThreatenedSpecies",
     "Vulnerable",
     "Endangered",
     "CriticallyEndangered",
   ];
 
   const categoryDescText = {
-    Threatened:
+    OtherThreatenedSpecies:
       'The "other threatened" category refers to species that are considered to be at risk of becoming endangered in the near future, but are not currently classified as endangered or vulnerable.',
     Vulnerable:
       "The vulnerable species category is a conservation status assigned to species that are likely to become endangered unless the circumstances threatening their survival and reproduction improve. These species have a decreasing population trend and face significant threats such as habitat loss, hunting, and climate change.",
@@ -49,7 +52,7 @@ function Content() {
   };
 
   const animalPicList = {
-    Threatened: {
+    OtherThreatenedSpecies: {
       image1: Tarsier,
       image2: CatSnake,
       image3: Binturong,
@@ -113,16 +116,17 @@ function Content() {
     },
   };
 
-  const x = {
-    wahoo: {
-      wahoo: "ASA",
-    },
+  const filterAnimals = (isActive, category) => {
+    dispatch(action.getAnimals(isActive, category));
   };
 
   const handleClick = (e) => {
     let chosen = document.getElementById(e.target.id);
-
-    // console.log(chosen.id);
+    // filterAnimals(chosen.id);
+    filterAnimals(
+      !document.getElementById(chosen.id).classList.contains("activeAnimal"),
+      chosen.id
+    );
     for (let i = 0; i < category.length; ++i) {
       let item = category[i];
       if (
@@ -163,7 +167,7 @@ function Content() {
     if (document.getElementsByClassName("activeAnimal").length == 0) {
       document.getElementById("categoryDesc").innerHTML = "";
       document.getElementById("animalPic1").src =
-        animalPicList["Threatened"].image1;
+        animalPicList["OtherThreatenedSpecies"].image1;
       document.getElementById("animalPic2").src =
         animalPicList["Vulnerable"].image1;
       document.getElementById("animalPic3").src =
@@ -171,7 +175,7 @@ function Content() {
       document.getElementById("animalPic4").src =
         animalPicList["CriticallyEndangered"].image1;
       document.getElementById("animalPicDesc1").innerHTML =
-        animalPicList["Threatened"].desc1;
+        animalPicList["OtherThreatenedSpecies"].desc1;
       document.getElementById("animalPicDesc2").innerHTML =
         animalPicList["Vulnerable"].desc1;
       document.getElementById("animalPicDesc3").innerHTML =
@@ -179,7 +183,7 @@ function Content() {
       document.getElementById("animalPicDesc4").innerHTML =
         animalPicList["CriticallyEndangered"].desc1;
       document.getElementById("animalSource1").href =
-        animalPicList["Threatened"].source1;
+        animalPicList["OtherThreatenedSpecies"].source1;
       document.getElementById("animalSource2").href =
         animalPicList["Vulnerable"].source1;
       document.getElementById("animalSource3").href =
@@ -199,7 +203,7 @@ function Content() {
               <td>
                 <div
                   className="animalCategory"
-                  id="Threatened"
+                  id="OtherThreatenedSpecies"
                   onClick={handleClick}
                 >
                   Other Threatened Species

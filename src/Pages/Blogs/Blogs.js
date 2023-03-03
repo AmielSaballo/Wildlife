@@ -2,7 +2,7 @@ import { React, useState, useEffect } from "react";
 import Footer from "../Common/Footer";
 import Content from "./Components/Content";
 import axios from "axios";
-import { BlogsAPI } from "../../Assets/services";
+import { BlogsAPI } from "../../Utils/services";
 
 function Blogs() {
   // const blogsList = [

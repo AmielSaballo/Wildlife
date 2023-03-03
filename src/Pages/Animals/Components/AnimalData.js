@@ -12,7 +12,9 @@ import TableSortLabel from "@mui/material/TableSortLabel";
 import Paper from "@mui/material/Paper";
 import { visuallyHidden } from "@mui/utils";
 import axios from "axios";
-import { AnimalsAPI } from "../../../Assets/services";
+import { AnimalsAPI } from "../../../Utils/services";
+import { useDispatch, useSelector } from "react-redux";
+import { getAnimals } from "../Utils/Action";
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -147,15 +149,26 @@ export default function AnimalData() {
   const [orderBy, setOrderBy] = React.useState("calories");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  const [rows, SetRows] = React.useState([]);
+  // const [rows, SetRows] = React.useState([]);
   const [init, SetInit] = React.useState(false);
 
-  axios.get(AnimalsAPI).then((res) => {
-    if (!init) {
-      SetRows(res.data);
-      SetInit(true);
-    }
-  });
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    dispatch(getAnimals());
+  }, [dispatch]);
+
+  const rows = useSelector((state) => state.animals);
+  // console.log(animalsData ? animalsData : "No data");
+
+  // axios.get(AnimalsAPI).then((res) => {
+  //   if (!init) {
+  //     SetRows(res.data);
+  //     SetInit(true);
+  //   }
+  // });
+
+  // console.log(rows.filter((row) => row.category == "Vulnerable"));
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";

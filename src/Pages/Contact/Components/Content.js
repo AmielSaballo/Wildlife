@@ -4,7 +4,7 @@ import "../Styles/Content.scss";
 import background from "../Images/Wetlands.jpg";
 import { TextField } from "@mui/material";
 import axios from "axios";
-import { ContactAPI } from "../../../Assets/services";
+import { ContactAPI } from "../../../Utils/services";
 
 function Content() {
   const [firstName, SetFName] = useState("");
