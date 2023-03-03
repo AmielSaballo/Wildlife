@@ -1,13 +1,12 @@
 import * as actions from "./ActionType";
 
-var initialState = { animals: [] };
+const initialState = { animals: [] };
 
-const reducer = (state = initialState, action) => {
+const AnimalsReducer = (state = initialState, action) => {
   //   console.log(state.initialState);
   switch (action.type) {
     case actions.GET_ANIMALS:
-      let animalData = state.animals;
-      animalData = action.payload;
+      let animalData = action.payload;
 
       if (action.category != null && action.isActive) {
         animalData = animalData.filter(
@@ -16,6 +15,7 @@ const reducer = (state = initialState, action) => {
       }
 
       return {
+        ...state,
         animals: animalData,
       };
     default:
@@ -23,4 +23,4 @@ const reducer = (state = initialState, action) => {
   }
 };
 
-export default reducer;
+export default AnimalsReducer;
