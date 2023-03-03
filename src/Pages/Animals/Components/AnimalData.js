@@ -11,10 +11,9 @@ import TableRow from "@mui/material/TableRow";
 import TableSortLabel from "@mui/material/TableSortLabel";
 import Paper from "@mui/material/Paper";
 import { visuallyHidden } from "@mui/utils";
-import axios from "axios";
-import { AnimalsAPI } from "../../../Utils/services";
 import { useDispatch, useSelector } from "react-redux";
 import { getAnimals } from "../Utils/Action";
+import Loading from "../../Common/Loading";
 
 function createData(name, calories, fat, carbs, protein) {
   return {
@@ -149,7 +148,6 @@ export default function AnimalData() {
   const [orderBy, setOrderBy] = React.useState("calories");
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
-  // const [rows, SetRows] = React.useState([]);
   const [init, SetInit] = React.useState(false);
 
   const dispatch = useDispatch();
@@ -159,16 +157,7 @@ export default function AnimalData() {
   }, [dispatch]);
 
   const rows = useSelector((state) => state.animals);
-  // console.log(animalsData ? animalsData : "No data");
-
-  // axios.get(AnimalsAPI).then((res) => {
-  //   if (!init) {
-  //     SetRows(res.data);
-  //     SetInit(true);
-  //   }
-  // });
-
-  // console.log(rows.filter((row) => row.category == "Vulnerable"));
+  // const rows = null;
 
   const handleRequestSort = (event, property) => {
     const isAsc = orderBy === property && order === "asc";
@@ -191,64 +180,73 @@ export default function AnimalData() {
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Paper sx={{ width: "100%", mb: 2 }}>
-        <TableContainer>
-          <Table
-            sx={{ minWidth: 750 }}
-            aria-labelledby="tableTitle"
-            size={"small"}
-          >
-            <EnhancedTableHead
-              order={order}
-              orderBy={orderBy}
-              onRequestSort={handleRequestSort}
-              rowCount={rows.length}
-            />
-            <TableBody>
-              {stableSort(rows, getComparator(order, orderBy))
-                .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-                .map((row, index) => {
-                  const labelId = `enhanced-table-checkbox-${index}`;
+      {rows == null ? (
+        <Loading />
+      ) : (
+        <Paper sx={{ width: "100%", mb: 2 }}>
+          <TableContainer>
+            <Table
+              sx={{ minWidth: 750 }}
+              aria-labelledby="tableTitle"
+              size={"small"}
+            >
+              <EnhancedTableHead
+                order={order}
+                orderBy={orderBy}
+                onRequestSort={handleRequestSort}
+                rowCount={rows.length}
+              />
+              <TableBody>
+                {stableSort(rows, getComparator(order, orderBy))
+                  .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
+                  .map((row, index) => {
+                    const labelId = `enhanced-table-checkbox-${index}`;
 
-                  return (
-                    <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
-                      <TableCell
-                        component="th"
-                        id={labelId}
-                        scope="row"
-                        padding="none"
+                    return (
+                      <TableRow
+                        hover
+                        role="checkbox"
+                        tabIndex={-1}
+                        key={row.id}
                       >
-                        {row.category}
-                      </TableCell>
-                      <TableCell align="left">{row.scientificName}</TableCell>
-                      <TableCell align="left">{row.commonName}</TableCell>
-                      <TableCell align="left">{row.status}</TableCell>
-                      <TableCell align="left">{row.location}</TableCell>
-                    </TableRow>
-                  );
-                })}
-              {emptyRows > 0 && (
-                <TableRow
-                  style={{
-                    height: 33 * emptyRows,
-                  }}
-                >
-                  <TableCell colSpan={6} />
-                </TableRow>
-              )}
-            </TableBody>
-          </Table>
-        </TableContainer>
-        <TablePagination
-          rowsPerPageOptions={[10, 25, 50]}
-          component="div"
-          count={rows.length}
-          rowsPerPage={rowsPerPage}
-          page={page}
-          onPageChange={handleChangePage}
-          onRowsPerPageChange={handleChangeRowsPerPage}
-        />
-      </Paper>
+                        <TableCell
+                          component="th"
+                          id={labelId}
+                          scope="row"
+                          padding="none"
+                        >
+                          {row.category}
+                        </TableCell>
+                        <TableCell align="left">{row.scientificName}</TableCell>
+                        <TableCell align="left">{row.commonName}</TableCell>
+                        <TableCell align="left">{row.status}</TableCell>
+                        <TableCell align="left">{row.location}</TableCell>
+                      </TableRow>
+                    );
+                  })}
+                {emptyRows > 0 && (
+                  <TableRow
+                    style={{
+                      height: 33 * emptyRows,
+                    }}
+                  >
+                    <TableCell colSpan={6} />
+                  </TableRow>
+                )}
+              </TableBody>
+            </Table>
+          </TableContainer>
+          <TablePagination
+            rowsPerPageOptions={[10, 25, 50]}
+            component="div"
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            onPageChange={handleChangePage}
+            onRowsPerPageChange={handleChangeRowsPerPage}
+          />
+        </Paper>
+      )}
     </Box>
   );
 }
