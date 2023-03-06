@@ -3,7 +3,6 @@ import "../Styles/Content.scss";
 import background from "../Images/Pangolin.jpg";
 import Header from "../../Common/Header";
 import { Link } from "react-router-dom";
-import Loading from "../../Common/Loading";
 
 function Content({ props }) {
   const headerContent = {
@@ -18,34 +17,28 @@ function Content({ props }) {
 
   const blogsList = props.map((item) => {
     return (
-      <div>
-        {props.length < 1 ? (
-          <Loading />
+      <div className="blogItem" key={item.id}>
+        {item.blogImage != null ? (
+          <img
+            src={require(`../Images/${item.blogImage}`)}
+            className="cardImage"
+          />
         ) : (
-          <div className="blogItem" key={item.id}>
-            {item.blogImage != null ? (
-              <img
-                src={require(`../Images/${item.blogImage}`)}
-                className="cardImage"
-              />
-            ) : (
-              <p>a</p>
-            )}
-            <div className="blogSummary">
-              <h2>
-                <Link to={"/blogs/" + item.blogTitle} state={{ item }}>
-                  {item.blogTitle}
-                </Link>
-              </h2>
-              <div className="blogDetails">
-                <p>{item.blogAuthor}</p>
-                <p>•</p>
-                <p>{item.postedDate}</p>
-              </div>
-              <p>{item.blogSummary}</p>
-            </div>
-          </div>
+          <p>a</p>
         )}
+        <div className="blogSummary">
+          <h2>
+            <Link to={"/blogs/" + item.blogTitle} state={{ item }}>
+              {item.blogTitle}
+            </Link>
+          </h2>
+          <div className="blogDetails">
+            <p>{item.blogAuthor}</p>
+            <p>•</p>
+            <p>{item.postedDate}</p>
+          </div>
+          <p>{item.blogSummary}</p>
+        </div>
       </div>
     );
   });
