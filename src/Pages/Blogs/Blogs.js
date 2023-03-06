@@ -14,10 +14,18 @@ function Blogs() {
   });
 
   return (
-    <div>
-      {blogs.length < 1 ? <Loading /> : <Content props={blogs} />}
+    <>
+      {blogs.length < 1 ? (
+        <Loading />
+      ) : (
+        <div>
+          {" "}
+          <Content props={blogs} />
+          <Footer />
+        </div>
+      )}
       <Footer />
-    </div>
+    </>
   );
 }
 

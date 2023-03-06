@@ -14,10 +14,17 @@ function Services() {
   });
 
   return (
-    <div>
-      {programs.length < 1 ? <Loading /> : <Content props={programs} />}
+    <>
+      {programs.length < 1 ? (
+        <Loading />
+      ) : (
+        <div>
+          <Content props={programs} />
+          <Footer />
+        </div>
+      )}
       <Footer />
-    </div>
+    </>
   );
 }
 

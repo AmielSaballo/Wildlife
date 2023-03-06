@@ -1,136 +1,11 @@
-import { React, useState } from "react";
+import { React } from "react";
 import Header from "../../Common/Header";
 import "../Styles/Content.scss";
 import background from "../Images/Wetlands.jpg";
-import { TextField } from "@mui/material";
-import axios from "axios";
 import { ContactAPI } from "../../../Utils/services";
+import Form from "../../Common/Form";
 
 function Content() {
-  const [firstName, SetFName] = useState("");
-  const [lastName, SetLName] = useState("");
-  const [phoneNumber, SetPhone] = useState("");
-  const [email, SetEmail] = useState("");
-  const [error, SetError] = useState({
-    fnameError: null,
-    lnameError: null,
-    phoneError: null,
-    emailError: null,
-  });
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    if (
-      validateName(firstName) &&
-      validateName(lastName) &&
-      validatePhoneNumber(phoneNumber) &&
-      validateEmail(email)
-    ) {
-      alert("We'll be in touch with you soon!");
-      // e.target.submit();
-
-      axios
-        .post(ContactAPI, {
-          firstName,
-          lastName,
-          phoneNumber,
-          email,
-        })
-        .then((res) => {})
-        .catch((err) => {
-          console.log(err.response.data);
-        });
-
-      SetFName("");
-      SetLName("");
-      SetPhone("");
-      SetEmail("");
-
-      document.getElementById("fname").value = "";
-      document.getElementById("lname").value = "";
-      document.getElementById("phone").value = "";
-      document.getElementById("email").value = "";
-    }
-  };
-
-  const handleChange = (e) => {
-    // console.log(e.target.id);
-    if (e.target.id == "fname" || e.target.id == "lname") {
-      validateName(e.target.value, e.target.id);
-    } else if (e.target.id == "phone") {
-      validatePhoneNumber(e.target.value);
-    } else if (e.target.id == "email") {
-      validateEmail(e.target.value);
-    }
-  };
-
-  const validateName = (name, target) => {
-    let error = "";
-    let isValid = false;
-    let pattern = /^[A-Za-z]+$/;
-
-    if (name.trim() == "") {
-      error = "Name is required";
-      isValid = false;
-    } else if (!pattern.test(name)) {
-      error = "Invalid name!";
-      isValid = false;
-    } else {
-      error = "";
-      isValid = true;
-    }
-
-    if (target == "fname") {
-      SetFName(name);
-      SetError({ ...error, fnameError: error });
-    } else {
-      SetLName(name);
-      SetError({ ...error, lnameError: error });
-    }
-
-    return isValid;
-  };
-
-  const validatePhoneNumber = (contact) => {
-    let err = error.contactError;
-    let isValid = false;
-    let pattern = /[0-9]/;
-
-    if (contact.trim() == "") {
-      err = "Phone Number is required";
-      isValid = false;
-    } else if (contact.trim().length != 11 || !pattern.test(contact)) {
-      err = "Invalid phone number!";
-      isValid = false;
-    } else {
-      err = "";
-      isValid = true;
-    }
-
-    SetPhone(contact);
-    SetError({ ...error, phoneError: err });
-    return isValid;
-  };
-
-  const validateEmail = (email) => {
-    let err = error.emailError;
-    let isValid = false;
-    let pattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-
-    if (!pattern.test(email)) {
-      err = "Invalid email!";
-      isValid = false;
-    } else {
-      err = "";
-      isValid = true;
-    }
-
-    SetEmail(email);
-    SetError({ ...error, emailError: err });
-
-    return isValid;
-  };
   const headerContent = {
     background: background,
     title: "Contact Us",
@@ -785,51 +660,10 @@ function Content() {
           <div className="form">
             <div className="formInside">
               <h1>Get in touch.</h1>
-              <form method="POST" action="" onSubmit={handleSubmit}>
-                <TextField
-                  id="fname"
-                  label="First Name"
-                  sx={{ mt: "1rem", mr: "1rem" }}
-                  onChange={handleChange}
-                  {...(error.fnameError && {
-                    error: true,
-                    helperText: error.fnameError,
-                  })}
-                />
-                <TextField
-                  id="lname"
-                  label="Last Name"
-                  sx={{ mt: "1rem" }}
-                  onChange={handleChange}
-                  {...(error.lnameError && {
-                    error: true,
-                    helperText: error.lnameError,
-                  })}
-                />
-                <TextField
-                  id="email"
-                  label="Email"
-                  sx={{ mt: "1rem", mr: "1rem" }}
-                  onChange={handleChange}
-                  {...(error.emailError && {
-                    error: true,
-                    helperText: error.emailError,
-                  })}
-                />
-                <TextField
-                  id="phone"
-                  label="Phone Number"
-                  sx={{ mt: "1rem" }}
-                  onChange={handleChange}
-                  {...(error.phoneError && {
-                    error: true,
-                    helperText: error.phoneError,
-                  })}
-                />
-                <div className="submitBtn">
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
+              <Form
+                postLink={ContactAPI}
+                successMessage={"We will be in touch with you soon!"}
+              />
             </div>
           </div>
         </div>
