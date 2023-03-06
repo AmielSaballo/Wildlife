@@ -3,6 +3,7 @@ import Content from "./Components/Content";
 import Footer from "../Common/Footer";
 import { useDispatch, useSelector } from "react-redux";
 import { getPrograms } from "./Utils/Action";
+import Loading from "../Common/Loading";
 
 function Services() {
   const dispatch = useDispatch();
@@ -14,7 +15,7 @@ function Services() {
 
   return (
     <div>
-      <Content props={programs} />
+      {programs.length < 1 ? <Loading /> : <Content props={programs} />}
       <Footer />
     </div>
   );
