@@ -23,7 +23,6 @@ function Services() {
           <Footer />
         </div>
       )}
-      <Footer />
     </>
   );
 }
