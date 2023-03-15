@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 function Content({ props }) {
   const headerContent = {
     background: background,
-    title: "Our Blogs",
+    title: "Blogs",
     source: "Gregg Yan",
     sourceText: "Palawan Pangolin",
     sourceLink:
