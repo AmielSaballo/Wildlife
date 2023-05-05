@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useEffect } from "react";
 import Carousel from "react-material-ui-carousel";
 import "../Styles/HomeCarousel.scss";
 import WorldWildlifeDay from "../images/wwd2023.jpg";
@@ -30,7 +30,7 @@ function HomeCarousel() {
       title:
         "Socio-Cultural Mapping and Documentation of ASEAN Heritage Parks in the Philippines",
       text: "The DENR, in partnership with NCCA and NCIP, is conducting a socio-cultural mapping and documentation project in Philippine ASEAN Heritage Parks to comprehensively document the indigenous knowledge system and practices of Indigenous Peoples/Indigenous Cultural Communities pertaining to resource use and conservation and inform policy-making, with a goal to complete the project in CY 2023.",
-      link: "",
+      link: "/blogs/Socio-Cultural%20Mapping%20%20and%20Documentation%20of%20ASEAN%20Heritage%20Parks%20in%20the%20Philippines",
       sourceText: " Mount Hamiguitan's Pygmy Forest",
       sourceLink:
         "https://jacobimages.com/2017/01/mount-hamiguitan-unesco-book-project",
@@ -40,7 +40,7 @@ function HomeCarousel() {
       title:
         "DENR-BMB cites significant strides in protected area, wildlife conservation",
       text: "The Philippines' Department of Environment and Natural Resources (DENR) has announced progress in areas of protected area management, cave management, and wildlife conservation, with seven more protected areas established under the National Integrated Protected Areas System, 12 species moving to improved conservation status, and 131 protected areas having established and maintained ecotourism facilities and amenities to promote sustainable management. The department has also been working to establish the Verde Island Passage as a protected area and is conducting a Protected Area Suitability Assessment to identify and appraise the status of various ecosystems, flora and fauna located in Mindoro, Batangas, Marinduque, Romblon and Quezon.",
-      link: "",
+      link: "/blogs/DENR-BMB%20cites%20significant%20strides%20in%20protected%20area,%20wildlife%20conservation",
       sourceText: "Mindanao Brown Deer",
       sourceLink: "https://www.joelsartore.com/ani023-00216/",
     },
@@ -68,7 +68,10 @@ function HomeCarousel() {
               </a>
               <p>{item.text}</p>
               <p>
-                Source: <a href={item.sourceLink}>{item.sourceText}</a>
+                Source:{" "}
+                <a href={item.sourceLink} target={"new"}>
+                  {item.sourceText}
+                </a>
               </p>
             </div>
           </div>

@@ -26,7 +26,10 @@ function Header({ props }) {
           <p>{props.sourceText}</p>
           <p>
             Source:
-            <a href={props.sourceLink}> {props.source}</a>
+            <a href={props.sourceLink} target={"new"}>
+              {" "}
+              {props.source}
+            </a>
           </p>
         </div>
       </div>

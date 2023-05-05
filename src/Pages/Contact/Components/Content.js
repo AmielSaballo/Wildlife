@@ -1,8 +1,9 @@
-import React from "react";
+import { React } from "react";
 import Header from "../../Common/Header";
 import "../Styles/Content.scss";
 import background from "../Images/Wetlands.jpg";
-import { TextField } from "@mui/material";
+import { ContactAPI } from "../../../Utils/services";
+import Form from "../../Common/Form";
 
 function Content() {
   const headerContent = {
@@ -659,15 +660,10 @@ function Content() {
           <div className="form">
             <div className="formInside">
               <h1>Get in touch.</h1>
-              <form action="">
-                <TextField id="fname" label="First Name" />
-                <TextField id="lname" label="Last Name" />
-                <TextField id="email" label="Email" />
-                <TextField id="phone" label="Phone Number" />
-                <div className="submitBtn">
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
+              <Form
+                postLink={ContactAPI}
+                successMessage={"We will be in touch with you soon!"}
+              />
             </div>
           </div>
         </div>

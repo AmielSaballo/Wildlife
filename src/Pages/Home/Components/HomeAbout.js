@@ -2,6 +2,7 @@ import React from "react";
 import Grid from "@mui/joy/Grid";
 import "../Styles/HomeAbout.scss";
 import LogoText from "../Images/LogoText.png";
+import { Link } from "react-router-dom";
 
 function HomeAbout() {
   return (
@@ -33,9 +34,9 @@ function HomeAbout() {
               backgrounds to join us in our efforts. Together, we can ensure a
               future where all species thrive in healthy and vibrant ecosystems.
             </p>
-            <a href="/about">
+            <Link to={"/about"}>
               <button className="aboutButton">About Us</button>
-            </a>
+            </Link>
           </Grid>
         </Grid>
       </div>

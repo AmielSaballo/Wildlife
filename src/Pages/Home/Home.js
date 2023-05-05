@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../Common/Footer";
 import Counter from "./Components/Counter";
 import HomeAbout from "./Components/HomeAbout";
@@ -12,10 +13,10 @@ import HomeBlogs from "./Components/HomeBlogs";
 
 const Home = () => {
   const animalStats = {
-    threatened: 20,
-    vulnerable: 15,
-    endangered: 10,
-    critEndangered: 30,
+    threatened: 101,
+    vulnerable: 119,
+    endangered: 55,
+    critEndangered: 47,
   };
 
   const areaStats = {
@@ -45,18 +46,19 @@ const Home = () => {
       <section className="stat">
         <Stats props={areaStats} />
       </section>
+      <div className="homePrograms">
+        <Link to={"/programs"}>
+          <Parallax text="Check out our programs" span="arrow_circle_right" />
+        </Link>
+      </div>
       <section className="join">
         <MisVis />
       </section>
-      <section className="services">
-        <HomeServices />
-      </section>
-      <a href="/services">
-        <Parallax text="Check out our services" span="arrow_circle_right" />
-      </a>
-      <section className="blogs">
-        <HomeBlogs />
-      </section>
+      <div className="homeBlogs">
+        <Link to={"/blogs"}>
+          <Parallax text="Check out our blogs" span="arrow_circle_right" />
+        </Link>
+      </div>
       <Footer />
     </div>
   );

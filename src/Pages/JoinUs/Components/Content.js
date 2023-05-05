@@ -1,9 +1,10 @@
-import React from "react";
+import { React } from "react";
 import Header from "../../Common/Header";
 import "../Styles/Content.scss";
 import background from "../Images/MarineTurtle.jpg";
 import CostalCleanUp from "../Images/CoastalCleanup.jfif";
-import { TextField } from "@mui/material";
+import { VolunteerAPI } from "../../../Utils/services";
+import Form from "../../Common/Form";
 
 function Content() {
   const headerContent = {
@@ -48,22 +49,17 @@ function Content() {
             <br />
             <div className="counter">
               <h1>
-                Be part of the <span className="counter">20,000</span> people
+                Be part of the <span className="counter">20,000+</span> people
                 advocating for our nation's wildlife.
               </h1>
             </div>
           </div>
           <div className="joinForm">
             <h2>Join hands and save the wildlife.</h2>
-            <form action="">
-              <TextField id="fname" label="First Name" />
-              <TextField id="lname" label="Last Name" />
-              <TextField id="email" label="Email" />
-              <TextField id="phone" label="Phone Number" />
-              <div className="submitBtn">
-                <button type="submit">Submit</button>
-              </div>
-            </form>
+            <Form
+              postLink={VolunteerAPI}
+              successMessage={"Thank you for joining the team!"}
+            />
           </div>
         </div>
       </div>

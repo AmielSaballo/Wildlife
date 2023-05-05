@@ -2,6 +2,7 @@ import React from "react";
 import "../Styles/MisVis.scss";
 import { Grid } from "@mui/joy";
 import PlantTrees from "../images/PlantTrees.jpg";
+import { Link } from "react-router-dom";
 
 function MisVis() {
   return (
@@ -34,9 +35,9 @@ function MisVis() {
               </p>
             </div>
             <div className="joinUs">
-              <a href="/join">
+              <Link to={"/join"}>
                 <button>Join Us</button>
-              </a>
+              </Link>
             </div>
           </Grid>
         </Grid>
